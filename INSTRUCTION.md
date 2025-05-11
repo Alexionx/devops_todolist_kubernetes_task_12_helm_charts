@@ -37,3 +37,12 @@ kubectl get all -n todoapp
 kubectl get pods -n todoapp
 kubectl logs <your-app-pod-name> -n todoapp
 ```
+
+## Save all resources to output.log
+
+After successful deployment, run:
+
+```
+kubectl get all,cm,secret,ing -A > .infrastructure/helm-chart/output.log
+
+```
